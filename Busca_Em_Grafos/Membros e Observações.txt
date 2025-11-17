@@ -1,0 +1,10 @@
+Membros do Trabalho: Daniel Servejeira, Pedro Alonso, Raphael Leiva, Rennan Collado
+
+
+GitHub: https://github.com/Collado1234/Grafos
+
+OBS: Nenhum código fonte foi alterado, apenas foi retirado alguns arquivos que não estavam sendo utilizados para a entrega do trabalho.
+
+* A versão em C contém apenas a implementação de grafos e as buscas. Sem aplicar numa ocasião real
+* A versão do Python Oficial, implementa o grafo em um contexto de árvore de habilidades de um jogo, em que um jogador gostaria de desbloquear uma magia mais avançada e precisa saber quais magias ele precisa desbloquear antes para chegar até a que ele quer.
+
