@@ -14,9 +14,7 @@ from sklearn.metrics import accuracy_score, f1_score, mean_squared_error, r2_sco
 # Importar funções vetorizadas
 from knn_algorithm import knn_classifier_vectorized, knn_regressor_vectorized
 
-# ----------------------------------------------------------
-# 1. CLASSIFICAÇÃO: Iris Dataset
-# ----------------------------------------------------------
+
 print("=== CLASSIFICAÇÃO: Iris Dataset ===")
 iris = load_iris()
 X, y = iris.data, iris.target
@@ -26,14 +24,13 @@ X_train, X_test, y_train, y_test = train_test_split(
     X, y, test_size=0.3, random_state=42
 )
 
-# Normalização (KNN sensível à escala)
+# Normalização
 scaler = StandardScaler()
 X_train_scaled = scaler.fit_transform(X_train)
 X_test_scaled = scaler.transform(X_test)
 
 k_class = 5
 
-# --- KNN implementado vetorizado ---
 y_pred_custom = knn_classifier_vectorized(X_train_scaled, y_train, X_test_scaled, k_class)
 
 # --- KNN do sklearn ---

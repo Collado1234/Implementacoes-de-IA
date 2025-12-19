@@ -7,9 +7,6 @@ Muito mais rápida para datasets grandes.
 import numpy as np
 from collections import Counter
 
-# ----------------------------------------------------------
-# Função para encontrar K vizinhos mais próximos (vetorizada)
-# ----------------------------------------------------------
 def get_neighbors_vectorized(X_train, y_train, X_test_sample, k):
     """
     Calcula as distâncias entre uma amostra de teste e todos os pontos de treino
@@ -24,9 +21,6 @@ def get_neighbors_vectorized(X_train, y_train, X_test_sample, k):
     # Retorna os rótulos/valores dos vizinhos
     return y_train[neighbors_idx]
 
-# ----------------------------------------------------------
-# KNN Classificador vetorizado
-# ----------------------------------------------------------
 def knn_classifier_vectorized(X_train, y_train, X_test, k):
     """
     Classifica amostras de teste usando votação majoritária entre K vizinhos mais próximos.
@@ -40,9 +34,7 @@ def knn_classifier_vectorized(X_train, y_train, X_test, k):
 
     return np.array(predictions)
 
-# ----------------------------------------------------------
-# KNN Regressor vetorizado
-# ----------------------------------------------------------
+
 def knn_regressor_vectorized(X_train, y_train, X_test, k):
     """
     Prediz valores para amostras de teste usando a média dos K vizinhos mais próximos.
@@ -54,4 +46,4 @@ def knn_regressor_vectorized(X_train, y_train, X_test, k):
         prediction = np.mean(neighbors_values)
         predictions.append(prediction)
 
-    return np.array(predictions)  # CORRIGIDO: converter lista em array
+    return np.array(predictions) 

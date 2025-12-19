@@ -37,7 +37,7 @@ def test_logistic_regression(ManualLogisticReg):
     )
     
     # --- 2. Seu Modelo (Implementação Manual) ---
-    print("\n--- 🌳 Sua Implementação Manual de Regressão Logística ---")
+    print("\n--- Implementação Manual de Regressão Logística ---")
     
     # Usamos uma taxa de aprendizado e iterações que funcionam bem para este dataset escalado
     logreg_manual = ManualLogisticReg(learning_rate=0.01, iterations=5000)
@@ -58,7 +58,7 @@ def test_logistic_regression(ManualLogisticReg):
     print(classification_report(y_test, y_pred_manual, target_names=['Maligno (0)', 'Benigno (1)']))
     
     # --- 3. Modelo Sklearn para Comparação ---
-    print("\n--- 🚀 Sklearn LogisticRegression (para validação) ---")
+    print("\n--- Sklearn LogisticRegression (para validação) ---")
     
     # Sklearn usa otimizadores mais avançados (ex: 'lbfgs') e regularização (C=1.0)
     logreg_sklearn = SklearnLogisticReg(solver='liblinear', C=1.0, random_state=42, max_iter=5000)

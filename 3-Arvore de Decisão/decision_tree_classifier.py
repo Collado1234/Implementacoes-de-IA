@@ -98,10 +98,10 @@ class DecisionTreeClassifier:
 
                 if info_gain > best_gain + 1e-12:
                     best_gain = info_gain
-                    best_idx = feature_index # CORRIGIDO: Usando 'best_idx' de forma consistente
+                    best_idx = feature_index 
                     best_thr = thr
 
-        return best_idx, best_thr, best_gain # CORRIGIDO: Retornando 'best_idx'
+        return best_idx, best_thr, best_gain 
     
 
     def _build_tree(self, X: np.ndarray, y: np.ndarray, depth: int = 0) -> DecisionTreeNode: 
@@ -132,7 +132,6 @@ class DecisionTreeClassifier:
         node.left = left
         node.right = right
 
-        # collect feature importance (simple accumulation of gains)
         self._accumulate_feature_importance(idx, gain)
 
         return node
@@ -225,5 +224,5 @@ class DecisionTreeClassifier:
             else:
                 path.append(f"{feat_name} ({value:.2f}) > {thresh:.2f} → direita")
                 node = node.right
-        path.append(f"✅ Folha: classe predita = {node.predicted_class}")
+        path.append(f"Folha: classe predita = {node.predicted_class}")
         return path

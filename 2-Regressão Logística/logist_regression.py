@@ -50,7 +50,7 @@ class LogisticReg:
         O método ajusta os parâmetros (theta) do modelo de modo a minimizar o erro de previsão.
         """
         # Adiciona uma coluna de 1s para o termo de interceptação (bias)
-        Xb = np.c_[np.ones((X.shape[0], 1)), X]
+        Xb = np.c_[np.ones((X.shape[0], 1)), X] #inicializa pesos com valores
         
         # Inicializa os coeficientes theta com zeros
         m, n = Xb.shape
